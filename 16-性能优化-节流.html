@@ -7,6 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="button" value="按钮">
+    <script>
+        // 1.节流：当高频率出发某个时间的时候，让代码执行第一次，第一次执行完成后再执行下一次
+
+        //网页轮播图
+
+        // 知识点铺垫：
+            // 1。函数中的参数能否是一个函数
+        // function myfn(fn){
+        //     fn()
+        // }
+
+        // function test(){
+        //     console.log(123);
+        // }
+        // myfn(test)
+
+        // 2.函数中的返回值能否是一个函数？
+        // function fn(){
+        //     return function (){
+        //         console.log(123);
+        //     }
+        // }
+        // let res = fn();
+        // res();
+
+        // 3.小问题
+        let btn = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        btn. addEventListener('click',fn(1))//绑定事件
+            //要求：点击按钮调用一个带有参数的函数
+
+        function fn(a){
+            return function(){
+                console.log(a);
+            }
+        }
+    </script>
 </body>
 </html>
