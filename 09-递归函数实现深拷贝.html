@@ -14,10 +14,17 @@
         //深拷贝：深拷贝在拷贝对象的时候，依次遍历对象中的值进行拷贝
 
         // 想要得到对象中的值：使用for in 遍历对象
+        // for in 遍历对象
+        // let obj ={}
+        // for(let key in obj ){
+        //     //key：就是obj对象中的每一个键
+        //     // obj[key]
+        // }
 
         //原生js实现深拷贝
         let obj1 = {
-            name: 'zs'
+            name: 'zs',
+            age : 23
         }
         let obj2 = {
 
@@ -36,6 +43,7 @@
 
         }
         clone(obj2,obj1)
+        console.log(obj2);
     </script>
 </body>
 
