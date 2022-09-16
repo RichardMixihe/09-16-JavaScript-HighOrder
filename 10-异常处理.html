@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 异常处理：当程序出现问题，通过错误提示给用户提示
+        // let a =123;
+        // let a =456;
+
+        // 异常处理：在程序中可能出现问题的地方，可以加异常处理
+
+        // 异常处理的方式
+        // a)抛出异常：当程序出问题了。直接提示程序的问题
+        // 语法：throw new Error('错误提示信息')；
+        // 注意：当程序中一旦抛出异常，后面的代码不会再执行
+
+        // function fn(a,b){
+        // throw new Error('参数使用错误');
+        // //conso1e.1og(123)
+        // console.log(a +c);
+        // fn(1,2);
+
+        // b)捕获异常：当程序中代码确实出现了一次，也被捕获到了，那么执行异常处理（抛出异常）
+        // 当程序代码没有异常，那么异常处理也不会执行（不会抛出异常）
+        // 使用方式：
+        // 1)在可能发生问题的代码上，加try
+        // 2)在try之后加catch，catch中就是用来处理异常
+        // 总结：
+        // 1.try中的代码发生异常，那么程序才会执行catch中的代码
+        // 2.try中的代码如果没有异常，那么程序不会执行 catch中的代码
+        // 3.如果希望程序中某些功能代码永远都要执行，则将代码放到final1y中
+            // function fn(a,b){
+            //     // 将可能出现问题的代码先放到try中
+            //     try {
+            //         console.log(a+c);
+            //     } catch  {
+            //         throw new Error('参数使用有误');
+            //     }finally{
+            //         console.log(123)
+            //     }
+            // }
+            // fn(1,2)
+        
+            // debugger调试：自动化的断点调试，代码中如果加入debugger，那么程序在断点调试的时候
+    </script>
+</body>
+</html>
