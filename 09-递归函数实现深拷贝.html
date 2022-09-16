@@ -52,7 +52,9 @@
             name: 'zs',
             family:{
                 fname:'老狗'
-            }
+            },
+            like:['蔡徐坤','鸡你太美']
+
         }
         let obj2 = {
             // family:{}
@@ -71,6 +73,35 @@
             for (const key in oldobj) {
                 newobj[key] = oldobj[key];
                 //判断当前值是不是一个对象
+                // instanceof是用来判断前者是不是属于后者(对象)
+
+                if (oldobj[key] instanceof Array) {
+                    newobj[key] = [];
+                    clone(newobj[key]= oldobj[key])
+                    
+                }else if(oldobj[key] instanceof Object){
+                    // obj2对象中必须将属性的值设置为一个对象
+                    newobj[key] = {};
+                    // 如果里面还有一个对象呢？是否需要再写一个for in遍历呢？那如果里面还有一个呢如果还有还有一个呢
+                    //这个clone函数做的就是遍历对象的工作
+                    // 调用函数
+                    clone()
+                }
+
+                //为什么不能先判断是否为object 因为数组也是属于对象 Object内置构造函数属于所有构造函数的老大
+                // ===========================
+                // if (oldobj[key] instanceof Object) {
+                //     // obj2对象中必须将属性的值设置为一个对象
+                //     newobj[key] = {};
+                //     // 如果里面还有一个对象呢？是否需要再写一个for in遍历呢？那如果里面还有一个呢如果还有还有一个呢
+                //     //这个clone函数做的就是遍历对象的工作
+                //     // 调用函数
+                //     clone()
+                // }else if(oldobj[key] instanceof Array){
+                //     newobj[key] = [];
+                //     clone(newobj[key]= oldobj[key])
+                // }
+                // ===========================
             }
 
         }
