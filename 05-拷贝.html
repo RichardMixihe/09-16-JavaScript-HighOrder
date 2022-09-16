@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //深拷贝：针对的是引用类型
+        //浅拷贝：针对的是引用类型
+
+        // 拷贝本质：将一个对拷贝赋值给另外一个对象
+
+        // 分析如下代码
+        // 将obj1对象复制给obj2对象
+        let obj1 = {
+            name : 'zs'
+        }
+        let obj2 = {}
+        obj2 = obj1;
+        obj2.name = 'ls'
+        console.log(obj1.name); //ls
+
+        // 如果将对象拷贝赋值给另外一个对象的时候，两个对象直接的值不要相互影响，不推荐直接赋值
+
+    </script>
+</body>
+</html>
