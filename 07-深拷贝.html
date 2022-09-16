@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lodash.min.js"></script>
+</head>
+<body>
+    <script>
+        // 深拷贝：将一个对象赋值给另外一个对象
+        // 实现方式：
+        // a) 使用第三方插件；
+        // b)使用JSON.stringfy()实现
+        // c)使用递归函数实现
+
+
+        // a) 使用第三方插件；
+                // let obj1 = {
+                //     name :'zs',
+                //     mama:{
+                //         age :45
+                //     }
+                // }
+                // let obj2 = {};
+                // obj2 = _.cloneDeep(obj1)
+                // console.log(obj2);
+                // obj2.mama.age = 35;
+                // console.log(obj1);
+                // console.log(obj2);
+
+
+
+        // b)使用JSON.stringfy()实现
+                
+
+
+
+
+
+        // 特点：
+            // 1.对象拷贝完成后，对象之间的值不会相互影响
+            // 2.深拷贝会依次遍历对象中的每一个值，然后将值进行了拷贝赋值
+    </script>
+</body>
+</html>
