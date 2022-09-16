@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./lodash.min.js"></script>
 </head>
 <body>
-    
+    <input type="button" value="按钮">
+    <script>
+        //程序优化
+        // a)防抖：当在程序中高频率的触发某个事件，只让事件执行最后一次
+        let btn = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        // btn. addEventListener('click',function () {
+        //     console.log('今天放假吗');
+        // })//绑定事件
+
+        // a1)防抖实现：
+        // let timeId;
+        // btn. addEventListener('click',function () {
+        //     clearTimeout(timeId);
+        //     timeId = setTimeout(function () {
+        //         console.log('今天放假吗');
+        //     }, 1000);
+        // })//绑定事件
+
+
+        // a2)防抖的实现也可以通过插件的方式
+            btn. addEventListener('click',_.debounce(calulateLayout,1000));
+            function calulateLayout(){
+                console.log('今天放假吗');
+            }
+
+
+        // b)节流
+    </script>
 </body>
 </html>
