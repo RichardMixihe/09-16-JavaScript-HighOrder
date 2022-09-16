@@ -5,10 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 100px;
+            border: 1px solid;
+        }
+    </style>
 </head>
 <body>
+    <div></div>
     <script>
-        // 递归函数应用场景：
+        // 递归函数应用场景：递归函数+延迟函数 ===>显示当前系统时间
+        let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        function myTime(){
+            let dt = new Date();
+            div.innerHTML = dt.toLocaleTimeString();
+            setTimeout(myTime,1000)
+        }
+        myTime();
+
+        setTimeout(() => {
+            
+        }, timeout);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // 1.使用定时器完成；
+        // setInterval(function(){
+        //     let dt = new Date();
+        //     div.innerHTML = dt.toLocaleTimeString();
+            
+        // }, 1000);
     </script>
 </body>
 </html>
