@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 浅拷贝：将一个对象赋值给另外一个对象
+        // 实现方式   object.assign(新对象，原来的对象);
+        // 代码演示：
+        let obj1 = {
+            name :'zs',
+            mama :{
+                age: 45
+            }
+        }
+        let obj2 = {}
+        Object.assign(obj2,obj1)
+        obj2.mama.age = 35
+        console.log(obj1.mama.age);
+        // console.log(obj2);
+        // obj2.name = 'ls'
+        // console.log(obj2);
+
+
+        // 浅拷贝总结：
+        // 1.浅拷贝的时候对象中的属性如果是一个简单类型；那么浅拷贝的时候，将值直接拷贝赋值
+        // 2.浅拷贝的时候，对象中的属性如果是一个引用类型（复杂类型），那么拷贝的时候，直接将引用类型的地址进行了拷贝赋值
+    </script>
+</body>
+</html>
