@@ -13,11 +13,32 @@
         // 1.可以通过apply()调用函数
         // 2.通过apply修改函数中的this
 
+
         //如何通过apply调用函数
-        function fn(){
-            console.log(this);
+        // function fn(){
+        //     console.log(this);
+        // }
+        // fn.apply()
+        
+        //如何通过apply修改函数中的this指向？
+        //语法：函数名.apply(对象)；I
+        // 原因：将apply后面的对象参数动态的赋值给this关键字
+        // function fn(){
+        //     console.log(this);
+        // }
+        // fn.apply({})
+        
+        //如何通过applyi调用带有参数的函数？
+        // 语法：函数名.apply(具体的对象,[实参,实参])
+        function fn(a,b){
+            console.log(a+b);
         }
-        fn.apply()
+        fn.apply(window,[1,2])
+
+
+        // apply和call的区别：
+        // apply的参数是一个数组
+        // call的参数就是普通参数的设置方式
     </script>
 </body>
 </html>
