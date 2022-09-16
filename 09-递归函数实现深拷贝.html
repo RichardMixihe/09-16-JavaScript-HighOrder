@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //递归函数：在函数内部函数自己调用自己
+        //深拷贝：深拷贝在拷贝对象的时候，依次遍历对象中的值进行拷贝
+
+        // 想要得到对象中的值：使用for in 遍历对象
+
+        //原生js实现深拷贝
+        let obj1 = {
+            name: 'zs'
+        }
+        let obj2 = {
+
+        };
+
+        //通过递归函数实现将obj1中的值拷贝到obj2
+
+        //代码实现：
+        function clone(newobj,oldobj) {
+            // newobj: obj2空对象
+            // oldobj:obj1原来的对象
+
+            for (const key in oldobj) {
+                newobj[key] = oldobj[key];
+            }
+
+        }
+        clone(obj2,obj1)
+    </script>
+</body>
+
+</html>
