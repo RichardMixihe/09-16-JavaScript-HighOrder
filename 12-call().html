@@ -11,20 +11,28 @@
 
 
         //执行过程：将call后面的对象参数，动态的赋值给this关键字
-        
+
 
         // function fn(){
         //     console.log(this);
         // }
         // fn.call(document);
 
-            let obj = {
-                name:'zs'
-            }
-        function fn(){
-            console.log(this);
+        //     let obj = {
+        //         name:'zs'
+        //     }
+        // function fn(){
+        //     console.log(this);
+        // }
+        // fn.call(obj)
+
+
+        //如何通过call调用带有参数的函数？
+        // 语法：函数名.call(具体的对象，实参1，实参2)
+        function fn(a,b){
+            console.log(a+b);
         }
-        fn.call(obj)
+        fn.call(window,1,2)
     </script>
 </body>
 </html>
