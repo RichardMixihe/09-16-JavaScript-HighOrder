@@ -21,12 +21,43 @@
         //     // obj[key]
         // }
 
-        //原生js实现深拷贝
-        let obj1 = {
+        // //原生js实现深拷贝
+        // let obj1 = {
+        //     name: 'zs',
+        //     age : 23
+        // }
+        // let obj2 = {
+
+        // };
+
+        // //通过递归函数实现将obj1中的值拷贝到obj2
+
+        // //代码实现：
+        // function clone(newobj,oldobj) {
+        //     // newobj: obj2空对象
+        //     // oldobj: obj1原来的对象
+
+        //     for (const key in oldobj) {
+        //         newobj[key] = oldobj[key];
+        //     }
+
+        // }
+        // clone(obj2,obj1)
+        // //打印拷贝后的值
+        // console.log(obj2);
+
+
+         //原生js实现深拷贝
+         let obj1 = {
             name: 'zs',
-            age : 23
+            family:{
+                fname:'老狗'
+            }
         }
         let obj2 = {
+            // family:{}
+            // obj2里面应该也要有family
+            // family是一个对象
 
         };
 
@@ -35,15 +66,23 @@
         //代码实现：
         function clone(newobj,oldobj) {
             // newobj: obj2空对象
-            // oldobj:obj1原来的对象
+            // oldobj: obj1原来的对象
 
             for (const key in oldobj) {
                 newobj[key] = oldobj[key];
+                //判断当前值是不是一个对象
             }
 
         }
         clone(obj2,obj1)
+        //打印拷贝后的值
         console.log(obj2);
+
+
+        // 为什么newobj[key]是键oldobj[key]是值呢？
+        // let key = 'name'; 
+        // obj2[key] = 123
+        // console.log('obj2')
     </script>
 </body>
 
