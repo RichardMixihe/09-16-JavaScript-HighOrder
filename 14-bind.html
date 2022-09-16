@@ -13,16 +13,29 @@
         // 作用：
         // 1.bind()修改函数中的this
         // 2.bind（）可以调用函数
-        // a)
+        // a)但是不会执行函数中的代码
         // b)有返回值，返回的结果就是当前调用的函数
         // 调用函数：
         // 语法：函数名.bind（）
 
-        function fn(){
-            console.log(123);
+        // function fn(){
+        //     console.log(123);
+        // }
+        // let res = fn.bind();
+        // res();
+
+        // 修改函数中的this指向
+        // 语法：函数名.bind(对象)
+        // function fn(){
+        //     console.log(this);
+        // }
+        // fn.bind(document)();
+
+        // 调用带有参数的函数：语法和call完全一样
+        function fn(a,b){
+            console.log(a+b);
         }
-        let res = fn.bind();
-        res();
+        fn.bind(window,1,2)();
     </script>
 </body>
 </html>
